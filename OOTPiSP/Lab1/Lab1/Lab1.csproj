@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="images\6feec4bd6f6e12ca440b1ee78d588d74.jpg" />
+      <Content Include="images\6feec4bd6f6e12ca440b1ee78d588d74.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="images\6ba07a687882de49c4d3a48d3ea762bc.jpg" />
+      <Content Include="images\6ba07a687882de49c4d3a48d3ea762bc.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="images\c50af48d851c3c830c30a9da4cc45c7b.png" />
+      <Content Include="images\c50af48d851c3c830c30a9da4cc45c7b.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="images\e5175a2b2fbb083c54c679a11d798f7b.jpg" />
+      <Content Include="images\e5175a2b2fbb083c54c679a11d798f7b.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="images\orhideya.png" />
+      <Content Include="images\orhideya.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="images\png-transparent-common-daisy-flower-daisy-family-transvaal-daisy-small-daisy-plant-stem-chamomile-tulip.png" />
+      <Content Include="images\png-transparent-common-daisy-flower-daisy-family-transvaal-daisy-small-daisy-plant-stem-chamomile-tulip.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="addFlowerForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
+    </ItemGroup>
+
+</Project>
