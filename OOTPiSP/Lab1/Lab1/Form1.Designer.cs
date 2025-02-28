@@ -30,8 +30,6 @@ partial class Form1
     private void InitializeComponent()
     {
         flowerLabel = new System.Windows.Forms.Label();
-        label1 = new System.Windows.Forms.Label();
-        label2 = new System.Windows.Forms.Label();
         flowerBox1 = new System.Windows.Forms.PictureBox();
         flowerBox2 = new System.Windows.Forms.PictureBox();
         flowerBox3 = new System.Windows.Forms.PictureBox();
@@ -40,6 +38,12 @@ partial class Form1
         flowerBox6 = new System.Windows.Forms.PictureBox();
         addFlowerBtn = new System.Windows.Forms.Button();
         myFlowersBtn = new System.Windows.Forms.Button();
+        label1 = new System.Windows.Forms.Label();
+        label2 = new System.Windows.Forms.Label();
+        label3 = new System.Windows.Forms.Label();
+        label4 = new System.Windows.Forms.Label();
+        label5 = new System.Windows.Forms.Label();
+        label6 = new System.Windows.Forms.Label();
         ((System.ComponentModel.ISupportInitialize)flowerBox1).BeginInit();
         ((System.ComponentModel.ISupportInitialize)flowerBox2).BeginInit();
         ((System.ComponentModel.ISupportInitialize)flowerBox3).BeginInit();
@@ -56,24 +60,6 @@ partial class Form1
         flowerLabel.Size = new System.Drawing.Size(252, 60);
         flowerLabel.TabIndex = 0;
         flowerLabel.Text = "Flowershop";
-        // 
-        // label1
-        // 
-        label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        label1.Location = new System.Drawing.Point(177, 144);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(215, 59);
-        label1.TabIndex = 1;
-        label1.Text = "Wildflowers";
-        // 
-        // label2
-        // 
-        label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-        label2.Location = new System.Drawing.Point(773, 144);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(215, 59);
-        label2.TabIndex = 2;
-        label2.Text = "Gardenflowers";
         // 
         // flowerBox1
         // 
@@ -93,7 +79,7 @@ partial class Form1
         // 
         // flowerBox3
         // 
-        flowerBox3.Location = new System.Drawing.Point(637, 386);
+        flowerBox3.Location = new System.Drawing.Point(608, 218);
         flowerBox3.Name = "flowerBox3";
         flowerBox3.Size = new System.Drawing.Size(193, 151);
         flowerBox3.TabIndex = 5;
@@ -101,7 +87,7 @@ partial class Form1
         // 
         // flowerBox4
         // 
-        flowerBox4.Location = new System.Drawing.Point(637, 206);
+        flowerBox4.Location = new System.Drawing.Point(934, 206);
         flowerBox4.Name = "flowerBox4";
         flowerBox4.Size = new System.Drawing.Size(193, 151);
         flowerBox4.TabIndex = 6;
@@ -109,7 +95,7 @@ partial class Form1
         // 
         // flowerBox5
         // 
-        flowerBox5.Location = new System.Drawing.Point(934, 206);
+        flowerBox5.Location = new System.Drawing.Point(608, 405);
         flowerBox5.Name = "flowerBox5";
         flowerBox5.Size = new System.Drawing.Size(193, 151);
         flowerBox5.TabIndex = 7;
@@ -125,11 +111,11 @@ partial class Form1
         // 
         // addFlowerBtn
         // 
-        addFlowerBtn.Location = new System.Drawing.Point(177, 610);
+        addFlowerBtn.Location = new System.Drawing.Point(145, 610);
         addFlowerBtn.Name = "addFlowerBtn";
         addFlowerBtn.Size = new System.Drawing.Size(247, 83);
         addFlowerBtn.TabIndex = 9;
-        addFlowerBtn.Text = "Добавить цветок";
+        addFlowerBtn.Text = "Add flower";
         addFlowerBtn.UseVisualStyleBackColor = true;
         addFlowerBtn.Click += button1_Click;
         // 
@@ -139,14 +125,68 @@ partial class Form1
         myFlowersBtn.Name = "myFlowersBtn";
         myFlowersBtn.Size = new System.Drawing.Size(247, 83);
         myFlowersBtn.TabIndex = 10;
-        myFlowersBtn.Text = "Мои цветы";
+        myFlowersBtn.Text = "My flowers";
         myFlowersBtn.UseVisualStyleBackColor = true;
+        // 
+        // label1
+        // 
+        label1.Location = new System.Drawing.Point(21, 386);
+        label1.Name = "label1";
+        label1.Size = new System.Drawing.Size(199, 23);
+        label1.TabIndex = 11;
+        label1.Text = "label1";
+        // 
+        // label2
+        // 
+        label2.Location = new System.Drawing.Point(316, 386);
+        label2.Name = "label2";
+        label2.Size = new System.Drawing.Size(199, 23);
+        label2.TabIndex = 12;
+        label2.Text = "label2";
+        // 
+        // label3
+        // 
+        label3.Location = new System.Drawing.Point(608, 379);
+        label3.Name = "label3";
+        label3.Size = new System.Drawing.Size(199, 23);
+        label3.TabIndex = 13;
+        label3.Text = "label3";
+        // 
+        // label4
+        // 
+        label4.Location = new System.Drawing.Point(934, 360);
+        label4.Name = "label4";
+        label4.Size = new System.Drawing.Size(199, 23);
+        label4.TabIndex = 14;
+        label4.Text = "label4";
+        // 
+        // label5
+        // 
+        label5.Location = new System.Drawing.Point(608, 559);
+        label5.Name = "label5";
+        label5.Size = new System.Drawing.Size(199, 23);
+        label5.TabIndex = 15;
+        label5.Text = "label5";
+        // 
+        // label6
+        // 
+        label6.Location = new System.Drawing.Point(934, 540);
+        label6.Name = "label6";
+        label6.Size = new System.Drawing.Size(199, 23);
+        label6.TabIndex = 16;
+        label6.Text = "label6";
         // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(1178, 733);
+        Controls.Add(label6);
+        Controls.Add(label5);
+        Controls.Add(label4);
+        Controls.Add(label3);
+        Controls.Add(label2);
+        Controls.Add(label1);
         Controls.Add(myFlowersBtn);
         Controls.Add(addFlowerBtn);
         Controls.Add(flowerBox6);
@@ -155,8 +195,6 @@ partial class Form1
         Controls.Add(flowerBox3);
         Controls.Add(flowerBox2);
         Controls.Add(flowerBox1);
-        Controls.Add(label2);
-        Controls.Add(label1);
         Controls.Add(flowerLabel);
         MaximumSize = new System.Drawing.Size(1200, 789);
         MinimumSize = new System.Drawing.Size(1200, 789);
@@ -169,6 +207,11 @@ partial class Form1
         ((System.ComponentModel.ISupportInitialize)flowerBox6).EndInit();
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.Label label6;
 
     private System.Windows.Forms.Button addFlowerBtn;
 

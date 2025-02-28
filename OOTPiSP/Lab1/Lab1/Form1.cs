@@ -14,6 +14,8 @@ public partial class Form1 : Form
             flowerBox5,
             flowerBox6
         };
+        
+        List<Label> labels = new List<Label> { label1, label2, label3, label4, label5, label6 };
         List<Flower> flowerList = new List<Flower>()
         {
             new Cornflower(),
@@ -26,7 +28,7 @@ public partial class Form1 : Form
         };
         for (int i = 0; i < flowerList.Count; i++)
         {
-            LoadFlowerImage(flowerList[i], flowerBoxList[i]);
+            LoadFlowerImage(flowerList[i], flowerBoxList[i], labels[i]);
         }
        
         
@@ -34,9 +36,10 @@ public partial class Form1 : Form
     }
     
 
-    private void LoadFlowerImage(Flower flower, PictureBox picturebox){
+    private void LoadFlowerImage(Flower flower, PictureBox picturebox, Label label){
         picturebox.Image = Image.FromFile(flower.pictureURL);
         picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
+        label.Text = flower.name;
     }
 
     private void button1_Click(object sender, EventArgs e)
