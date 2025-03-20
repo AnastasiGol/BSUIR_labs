@@ -1,6 +1,6 @@
 ﻿namespace Lab1;
 
-partial class Form1
+partial class MainForm
 {
     /// <summary>
     ///  Required designer variable.
@@ -44,6 +44,8 @@ partial class Form1
         label4 = new System.Windows.Forms.Label();
         label5 = new System.Windows.Forms.Label();
         label6 = new System.Windows.Forms.Label();
+        label7 = new System.Windows.Forms.Label();
+        label8 = new System.Windows.Forms.Label();
         ((System.ComponentModel.ISupportInitialize)flowerBox1).BeginInit();
         ((System.ComponentModel.ISupportInitialize)flowerBox2).BeginInit();
         ((System.ComponentModel.ISupportInitialize)flowerBox3).BeginInit();
@@ -111,13 +113,13 @@ partial class Form1
         // 
         // addFlowerBtn
         // 
-        addFlowerBtn.Location = new System.Drawing.Point(145, 610);
+        addFlowerBtn.Location = new System.Drawing.Point(141, 610);
         addFlowerBtn.Name = "addFlowerBtn";
         addFlowerBtn.Size = new System.Drawing.Size(247, 83);
         addFlowerBtn.TabIndex = 9;
         addFlowerBtn.Text = "Add flower";
         addFlowerBtn.UseVisualStyleBackColor = true;
-        addFlowerBtn.Click += button1_Click;
+        addFlowerBtn.Click += addFlower_click;
         // 
         // myFlowersBtn
         // 
@@ -127,6 +129,7 @@ partial class Form1
         myFlowersBtn.TabIndex = 10;
         myFlowersBtn.Text = "My flowers";
         myFlowersBtn.UseVisualStyleBackColor = true;
+        myFlowersBtn.Click += myFlowersBtn_Click;
         // 
         // label1
         // 
@@ -176,11 +179,31 @@ partial class Form1
         label6.TabIndex = 16;
         label6.Text = "label6";
         // 
-        // Form1
+        // label7
+        // 
+        label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+        label7.Location = new System.Drawing.Point(208, 160);
+        label7.Name = "label7";
+        label7.Size = new System.Drawing.Size(125, 39);
+        label7.TabIndex = 17;
+        label7.Text = "Wildflowers";
+        // 
+        // label8
+        // 
+        label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+        label8.Location = new System.Drawing.Point(790, 160);
+        label8.Name = "label8";
+        label8.Size = new System.Drawing.Size(180, 28);
+        label8.TabIndex = 18;
+        label8.Text = "Gardenflowers";
+        // 
+        // MainForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(1178, 733);
+        Controls.Add(label8);
+        Controls.Add(label7);
         Controls.Add(label6);
         Controls.Add(label5);
         Controls.Add(label4);
@@ -207,6 +230,9 @@ partial class Form1
         ((System.ComponentModel.ISupportInitialize)flowerBox6).EndInit();
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Label label7;
+    private System.Windows.Forms.Label label8;
 
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label4;

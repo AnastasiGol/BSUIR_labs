@@ -1,7 +1,12 @@
 ﻿namespace Lab1;
 
-class WildFlower : Flower
+abstract class WildFlower : Flower
 {
-    private string habitat;
-    private string size;
+    public string Habitat{ get; set; }
+    public string Size{ get; set; }
+    
+    public override string ToString()
+    {
+        return base.ToString() + $"Habitat: {Habitat}, Size: {Size}, ";
+    }
 }

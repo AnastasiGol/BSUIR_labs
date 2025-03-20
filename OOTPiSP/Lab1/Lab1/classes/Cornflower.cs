@@ -2,10 +2,17 @@
 
 class Cornflower : WildFlower
 {
+    public bool IsEdible { get; set; }
+    public bool WildGrowthRegion { get; set; }
     public Cornflower()
     {
-        pictureURL = "images//6feec4bd6f6e12ca440b1ee78d588d74.jpg";
-        name = "Cornflower";
+        PictureURL = "images//6feec4bd6f6e12ca440b1ee78d588d74.jpg";
+        Name = "Cornflower";
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $"Edible : {IsEdible}, WildGrowth : {WildGrowthRegion}";
+    } 
 
 }

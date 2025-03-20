@@ -57,13 +57,13 @@ public partial class MainForm : Form
                     showError();
                 }
             }
-            else if (encypherButton.Checked && vizhinerButton.Checked && isKeyShorter())
+            else if (encypherButton.Checked && vizhinerButton.Checked && isKeyShorter() && !isKeyOnlyInt())
             {
                 plaintext = plainTextBox.Text.ToLower();
                 string key = keyTextbox.Text;
                 result = TextProcessor.VizhinerEncryption(plaintext, key);
             }
-            else if (decipherButton.Checked && vizhinerButton.Checked && isKeyShorter())
+            else if (decipherButton.Checked && vizhinerButton.Checked && isKeyShorter() && !isKeyOnlyInt())
             {
                 plaintext = plainTextBox.Text.ToLower();
                 string key = keyTextbox.Text;
@@ -102,7 +102,7 @@ public partial class MainForm : Form
             {
                 try
                 {
-                    plainTextBox.Text = File.ReadLines(openFileDialog.FileName).FirstOrDefault();
+                    plainTextBox.Text = File.ReadAllText(openFileDialog.FileName);
                 }
                 catch (Exception ex)
                 {
@@ -157,7 +157,13 @@ public partial class MainForm : Form
     private bool isKeyIntCorrect()
     {
         
-        return int.TryParse(keyTextbox.Text, out _) && int.Parse(keyTextbox.Text) < 33 && int.Parse(keyTextbox.Text) > 0 && (GCD(int.Parse(keyTextbox.Text), 33) == 1);
+        return int.TryParse(keyTextbox.Text, out _) &&  int.Parse(keyTextbox.Text) > 0 && (GCD(int.Parse(keyTextbox.Text), 33) == 1);
+    }
+    
+    private bool isKeyOnlyInt()
+    {
+        
+        return int.TryParse(keyTextbox.Text, out _) ;
     }
     
     private static int GCD(int a, int b)

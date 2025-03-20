@@ -1,11 +1,13 @@
+#Иерархия классов в цветочном магазине 
+
 Flower (Базовый класс)
 │
-├── GardenFlower (Наследует Flower)
+├── GardenFlower (Наследует Flower)  
 │   ├── Rose
-│   ├── Tulip
-│   ├── Peone
-│   └── Orchid
+│   ├── Tulip   
+│   ├── Peone   
+│   └── Orchid   
 │
-└── WildFlower (Наследует Flower)
-    ├── Daisy
-    └── Cornflower
+└── WildFlower (Наследует Flower)  
+    ├── Daisy   
+    └── Cornflower  

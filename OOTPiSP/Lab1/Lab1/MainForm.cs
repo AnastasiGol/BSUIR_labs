@@ -1,8 +1,8 @@
 namespace Lab1;
 
-public partial class Form1 : Form
+public partial class MainForm : Form
 {
-    public Form1()
+    public MainForm()
     {
         InitializeComponent();
         List<PictureBox> flowerBoxList = new List<PictureBox>()
@@ -37,13 +37,25 @@ public partial class Form1 : Form
     
 
     private void LoadFlowerImage(Flower flower, PictureBox picturebox, Label label){
-        picturebox.Image = Image.FromFile(flower.pictureURL);
+        picturebox.Image = Image.FromFile(flower.PictureURL);
         picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
-        label.Text = flower.name;
+        label.Text = flower.Name;
     }
 
     private void button1_Click(object sender, EventArgs e)
     {
         //throw new System.NotImplementedException();
+    }
+
+    private void addFlower_click(object sender, EventArgs e)
+    {
+        addFlowerForm addFlowerForm = new addFlowerForm();
+        addFlowerForm.ShowDialog();
+    }
+
+    private void myFlowersBtn_Click(object sender, EventArgs e)
+    {
+        ShowFlowersForm showFlowersForm = new ShowFlowersForm();
+        showFlowersForm.ShowDialog();
     }
 }

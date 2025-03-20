@@ -1,9 +1,14 @@
 ﻿namespace Lab1;
 
-class GardenFlower : Flower
+abstract class GardenFlower : Flower
 {
-    public string season;
-    public string pruning;
+    public string Season{get;set;}
+    public string Pruning{get;set;}
+    
+    public override string ToString()
+    {
+        return base.ToString() + $"Season: {Season}, Pruning: {Pruning}, ";
+    }
 
 
 }
