@@ -39,9 +39,6 @@
       <Compile Update="addFlowerForm.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="AddPropertiesForm.cs">
-        <SubType>Form</SubType>
-      </Compile>
       <Compile Update="ShowFlowersForm.cs">
         <SubType>Form</SubType>
       </Compile>

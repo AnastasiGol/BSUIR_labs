@@ -8,9 +8,19 @@ public abstract class Flower
     public int Price { get; set; }
     public string PictureURL { get; set; }
     
-    public Flower() { }
+    public static int InstanceCount { get; private set; } = 0;
 
-    public virtual string ToString()
+    public Flower()
+    {
+        InstanceCount++;
+    }
+    
+    static Flower() 
+    {
+        InstanceCount = 0;
+    }
+
+    public override string ToString()
     {
         return $"Name: {Name}, Height: {Height} cm, Color: {Color}, Price: {Price} USD, ";
     }

@@ -64,6 +64,23 @@ public partial class addFlowerForm : Form
        // object flowerInstance = Activator.CreateInstance(flowerType);
     }
     
+    bool HasEmptyFields(object obj)
+    {
+        foreach (PropertyInfo prop in obj.GetType().GetProperties())
+        {
+            object value = prop.GetValue(obj);
+
+            if (value == null || 
+                (value is string str && string.IsNullOrWhiteSpace(str)) || 
+                (value is int num && num == 0))
+            {
+                return true; // Нашли пустое поле
+            }
+        }
+        return false; // Все поля заполнены
+    }
+
+    
     private void addButton_Click(object sender, EventArgs e)
     {
         string stringType = flowersComboBox.SelectedItem.ToString();
@@ -71,23 +88,35 @@ public partial class addFlowerForm : Form
         Type flowerType = Type.GetType("Lab1." + stringType);
         Dictionary<string, object> properties = GetProperties(flowerType);
         object flowerInstance = Activator.CreateInstance(flowerType);
+
+        bool hasError = false;
         foreach (var property in properties)
         {
             PropertyInfo propInfo = flowerType.GetProperty(property.Key);
-            if (propInfo != null )
-                try
-                {
-                    object convertedValue = Convert.ChangeType(property.Value, propInfo.PropertyType);
-                    propInfo.SetValue(flowerInstance, convertedValue);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при установке свойства {property.Key}: {ex.Message}");
-                }
+            try
+            {
+                object convertedValue = Convert.ChangeType(property.Value, propInfo.PropertyType);
+                propInfo.SetValue(flowerInstance, convertedValue);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при установке свойства {property.Key}\nПопробуйте еще раз");
+                hasError = true;
+            }    
         }
-        Program.flowerList.Add((Flower)flowerInstance);
-        this.Close();
-   
+        if (!hasError && HasEmptyFields(flowerInstance))
+        {
+            MessageBox.Show("Некоторые поля пустые. Заполните их перед добавлением.");
+            hasError = true;
+        }
+
+
+        if (!hasError)
+        {
+            Program.flowerList.Add((Flower)flowerInstance);
+            Close();
+        }
+
     }
 
     private void AddProperties(List<PropertyInfo> properties)
@@ -159,6 +188,8 @@ public partial class addFlowerForm : Form
             AddProperties(propNames);
 
         }
+
+        int count = Flower.InstanceCount;
 
 
     }

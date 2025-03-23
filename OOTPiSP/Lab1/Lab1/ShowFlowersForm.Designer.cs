@@ -32,7 +32,9 @@ partial class ShowFlowersForm
     private void InitializeComponent()
     {
         label1 = new System.Windows.Forms.Label();
-        listBox1 = new System.Windows.Forms.ListBox();
+        flowersBox = new System.Windows.Forms.ListBox();
+        addNewButton = new System.Windows.Forms.Button();
+        deleteButton = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // label1
@@ -45,28 +47,52 @@ partial class ShowFlowersForm
         label1.Text = "Ваши цветы:";
         label1.Click += label1_Click;
         // 
-        // listBox1
+        // flowersBox
         // 
-        listBox1.FormattingEnabled = true;
-        listBox1.ItemHeight = 25;
-        listBox1.Location = new System.Drawing.Point(12, 108);
-        listBox1.Name = "listBox1";
-        listBox1.Size = new System.Drawing.Size(1033, 629);
-        listBox1.TabIndex = 1;
-        listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+        flowersBox.FormattingEnabled = true;
+        flowersBox.ItemHeight = 25;
+        flowersBox.Location = new System.Drawing.Point(12, 108);
+        flowersBox.Name = "flowersBox";
+        flowersBox.Size = new System.Drawing.Size(1033, 604);
+        flowersBox.TabIndex = 1;
+        flowersBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+        // 
+        // addNewButton
+        // 
+        addNewButton.Location = new System.Drawing.Point(72, 733);
+        addNewButton.Name = "addNewButton";
+        addNewButton.Size = new System.Drawing.Size(242, 74);
+        addNewButton.TabIndex = 2;
+        addNewButton.Text = "Добавить новый";
+        addNewButton.UseVisualStyleBackColor = true;
+        addNewButton.Click += addNewButton_Click;
+        // 
+        // deleteButton
+        // 
+        deleteButton.Location = new System.Drawing.Point(359, 733);
+        deleteButton.Name = "deleteButton";
+        deleteButton.Size = new System.Drawing.Size(242, 74);
+        deleteButton.TabIndex = 3;
+        deleteButton.Text = "Удалить";
+        deleteButton.UseVisualStyleBackColor = true;
         // 
         // ShowFlowersForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(1057, 765);
-        Controls.Add(listBox1);
+        ClientSize = new System.Drawing.Size(1062, 819);
+        Controls.Add(deleteButton);
+        Controls.Add(addNewButton);
+        Controls.Add(flowersBox);
         Controls.Add(label1);
-        Text = "ShowFlowersForm";
+        Text = "Мои цветы";
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.ListBox listBox1;
+    private System.Windows.Forms.Button addNewButton;
+    private System.Windows.Forms.Button deleteButton;
+
+    private System.Windows.Forms.ListBox flowersBox;
 
     private System.Windows.Forms.Label label1;
 

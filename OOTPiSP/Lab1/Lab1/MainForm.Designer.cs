@@ -57,7 +57,7 @@ partial class MainForm
         // flowerLabel
         // 
         flowerLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        flowerLabel.Location = new System.Drawing.Point(489, 41);
+        flowerLabel.Location = new System.Drawing.Point(450, 55);
         flowerLabel.Name = "flowerLabel";
         flowerLabel.Size = new System.Drawing.Size(252, 60);
         flowerLabel.TabIndex = 0;
@@ -81,23 +81,23 @@ partial class MainForm
         // 
         // flowerBox3
         // 
-        flowerBox3.Location = new System.Drawing.Point(608, 218);
+        flowerBox3.Location = new System.Drawing.Point(608, 204);
         flowerBox3.Name = "flowerBox3";
-        flowerBox3.Size = new System.Drawing.Size(193, 151);
+        flowerBox3.Size = new System.Drawing.Size(193, 165);
         flowerBox3.TabIndex = 5;
         flowerBox3.TabStop = false;
         // 
         // flowerBox4
         // 
-        flowerBox4.Location = new System.Drawing.Point(934, 206);
+        flowerBox4.Location = new System.Drawing.Point(934, 204);
         flowerBox4.Name = "flowerBox4";
-        flowerBox4.Size = new System.Drawing.Size(193, 151);
+        flowerBox4.Size = new System.Drawing.Size(193, 165);
         flowerBox4.TabIndex = 6;
         flowerBox4.TabStop = false;
         // 
         // flowerBox5
         // 
-        flowerBox5.Location = new System.Drawing.Point(608, 405);
+        flowerBox5.Location = new System.Drawing.Point(608, 412);
         flowerBox5.Name = "flowerBox5";
         flowerBox5.Size = new System.Drawing.Size(193, 151);
         flowerBox5.TabIndex = 7;
@@ -105,7 +105,7 @@ partial class MainForm
         // 
         // flowerBox6
         // 
-        flowerBox6.Location = new System.Drawing.Point(934, 386);
+        flowerBox6.Location = new System.Drawing.Point(934, 412);
         flowerBox6.Name = "flowerBox6";
         flowerBox6.Size = new System.Drawing.Size(193, 151);
         flowerBox6.TabIndex = 8;
@@ -113,7 +113,7 @@ partial class MainForm
         // 
         // addFlowerBtn
         // 
-        addFlowerBtn.Location = new System.Drawing.Point(141, 610);
+        addFlowerBtn.Location = new System.Drawing.Point(132, 653);
         addFlowerBtn.Name = "addFlowerBtn";
         addFlowerBtn.Size = new System.Drawing.Size(247, 83);
         addFlowerBtn.TabIndex = 9;
@@ -123,7 +123,7 @@ partial class MainForm
         // 
         // myFlowersBtn
         // 
-        myFlowersBtn.Location = new System.Drawing.Point(741, 610);
+        myFlowersBtn.Location = new System.Drawing.Point(723, 653);
         myFlowersBtn.Name = "myFlowersBtn";
         myFlowersBtn.Size = new System.Drawing.Size(247, 83);
         myFlowersBtn.TabIndex = 10;
@@ -157,7 +157,7 @@ partial class MainForm
         // 
         // label4
         // 
-        label4.Location = new System.Drawing.Point(934, 360);
+        label4.Location = new System.Drawing.Point(934, 379);
         label4.Name = "label4";
         label4.Size = new System.Drawing.Size(199, 23);
         label4.TabIndex = 14;
@@ -165,7 +165,7 @@ partial class MainForm
         // 
         // label5
         // 
-        label5.Location = new System.Drawing.Point(608, 559);
+        label5.Location = new System.Drawing.Point(608, 566);
         label5.Name = "label5";
         label5.Size = new System.Drawing.Size(199, 23);
         label5.TabIndex = 15;
@@ -173,7 +173,7 @@ partial class MainForm
         // 
         // label6
         // 
-        label6.Location = new System.Drawing.Point(934, 540);
+        label6.Location = new System.Drawing.Point(934, 566);
         label6.Name = "label6";
         label6.Size = new System.Drawing.Size(199, 23);
         label6.TabIndex = 16;
@@ -182,9 +182,9 @@ partial class MainForm
         // label7
         // 
         label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        label7.Location = new System.Drawing.Point(208, 160);
+        label7.Location = new System.Drawing.Point(200, 160);
         label7.Name = "label7";
-        label7.Size = new System.Drawing.Size(125, 39);
+        label7.Size = new System.Drawing.Size(157, 39);
         label7.TabIndex = 17;
         label7.Text = "Wildflowers";
         // 
@@ -201,7 +201,7 @@ partial class MainForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(1178, 733);
+        ClientSize = new System.Drawing.Size(1178, 844);
         Controls.Add(label8);
         Controls.Add(label7);
         Controls.Add(label6);
@@ -219,8 +219,8 @@ partial class MainForm
         Controls.Add(flowerBox2);
         Controls.Add(flowerBox1);
         Controls.Add(flowerLabel);
-        MaximumSize = new System.Drawing.Size(1200, 789);
-        MinimumSize = new System.Drawing.Size(1200, 789);
+        MaximumSize = new System.Drawing.Size(1200, 900);
+        MinimumSize = new System.Drawing.Size(1200, 900);
         Text = "Form1";
         ((System.ComponentModel.ISupportInitialize)flowerBox1).EndInit();
         ((System.ComponentModel.ISupportInitialize)flowerBox2).EndInit();
