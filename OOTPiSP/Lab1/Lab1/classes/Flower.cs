@@ -1,5 +1,6 @@
 ﻿namespace Lab1;
 
+[Serializable]
 public abstract class Flower 
 {
     public string Name{get; set;}

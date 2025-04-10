@@ -30,8 +30,6 @@ public partial class MainForm : Form
         {
             LoadFlowerImage(flowerList[i], flowerBoxList[i], labels[i]);
         }
-       
-        
         
     }
     
@@ -40,17 +38,6 @@ public partial class MainForm : Form
         picturebox.Image = Image.FromFile(flower.PictureURL);
         picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
         label.Text = flower.Name;
-    }
-
-    private void button1_Click(object sender, EventArgs e)
-    {
-        //throw new System.NotImplementedException();
-    }
-
-    private void addFlower_click(object sender, EventArgs e)
-    {
-        addFlowerForm addFlowerForm = new addFlowerForm();
-        addFlowerForm.ShowDialog();
     }
 
     private void myFlowersBtn_Click(object sender, EventArgs e)

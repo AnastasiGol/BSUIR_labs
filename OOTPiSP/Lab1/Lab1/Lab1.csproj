@@ -42,6 +42,12 @@
       <Compile Update="ShowFlowersForm.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="EditFlowerForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ShowPropertiesForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

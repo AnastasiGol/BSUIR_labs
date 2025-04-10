@@ -23,8 +23,8 @@ public partial class addFlowerForm : Form
     private void LoadFlowerTypes()
     {
         var flowerTypes = typeof(Flower).Assembly.GetTypes()  
-            .Where(t => t.IsSubclassOf(typeof(Flower)) && !t.IsAbstract) // Только наследники Flower
-            .Select(t => t.Name) // Берем имена классов
+            .Where(t => t.IsSubclassOf(typeof(Flower)) && !t.IsAbstract) //  наследники Flower
+            .Select(t => t.Name) // имена классов
             .ToArray();
         flowersComboBox.Items.AddRange(flowerTypes);
     }
@@ -40,29 +40,39 @@ public partial class addFlowerForm : Form
             return enteredProperties;
         }
 
-        foreach (TextBox textBox in panel.Controls.OfType<TextBox>())
+        foreach (var property in type.GetProperties())
         {
-   
-            string labelName = textBox.Name.Replace("TextBox", "Label");
-            Label label = panel.Controls.OfType<Label>().FirstOrDefault(l => l.Name == labelName);
-            if (label == null)
+            string propertyName = property.Name;
+            Control inputControl = panel.Controls[$"{propertyName}TextBox"] ?? panel.Controls[$"{propertyName}ComboBox"];
+
+            if (inputControl is TextBox textBox && !string.IsNullOrEmpty(textBox.Text))
             {
-                MessageBox.Show($"Не найден Label для {textBox.Name}");
-                continue;
+                try
+                {
+                    object convertedValue = Convert.ChangeType(textBox.Text, property.PropertyType);
+                    enteredProperties[propertyName] = convertedValue;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show($"Ошибка преобразования для {propertyName}. Проверьте формат данных.");
+                }
             }
-            if (!string.IsNullOrEmpty(textBox.Text))
+            else if (inputControl is ComboBox comboBox)
             {
-                enteredProperties[label.Text] = textBox.Text;
+                if (property.PropertyType == typeof(bool))
+                {
+                    enteredProperties[propertyName] = comboBox.SelectedItem.ToString() == "True";
+                }
+                else
+                {
+                    enteredProperties[propertyName] = comboBox.SelectedItem.ToString();
+                }
             }
         }
+
         return enteredProperties;
     }
-
-
-    private static void AddFlower( Dictionary<string, object> properties)
-    {
-       // object flowerInstance = Activator.CreateInstance(flowerType);
-    }
+    
     
     bool HasEmptyFields(object obj)
     {
@@ -74,20 +84,20 @@ public partial class addFlowerForm : Form
                 (value is string str && string.IsNullOrWhiteSpace(str)) || 
                 (value is int num && num == 0))
             {
-                return true; // Нашли пустое поле
+                return true; //  пустое поле
             }
         }
-        return false; // Все поля заполнены
+        return false; 
     }
 
     
     private void addButton_Click(object sender, EventArgs e)
     {
-        string stringType = flowersComboBox.SelectedItem.ToString();
-        
-        Type flowerType = Type.GetType("Lab1." + stringType);
+        string stringType = flowersComboBox.SelectedItem.ToString() ?? string.Empty;
+
+        Type flowerType = Type.GetType("Lab1." + stringType) ?? typeof(object);
         Dictionary<string, object> properties = GetProperties(flowerType);
-        object flowerInstance = Activator.CreateInstance(flowerType);
+        object flowerInstance = Activator.CreateInstance(flowerType) ;
 
         bool hasError = false;
         foreach (var property in properties)
@@ -110,13 +120,57 @@ public partial class addFlowerForm : Form
             hasError = true;
         }
 
-
         if (!hasError)
         {
             Program.flowerList.Add((Flower)flowerInstance);
             Close();
         }
 
+    }
+    
+    private Panel CreatePropertiesPanel()
+    {
+        Panel panel = new Panel
+        {
+            AutoSize = true,
+            Location = new Point(0, 0),
+            Name = "propertiesPanel"
+        };
+        return panel;
+    }
+    
+    private Label CreateLabel(string propertyName, int x, int y, Size size)
+    {
+        return new Label
+        {
+            Text = propertyName,
+            Location = new Point(x, y),
+            Name = $"{propertyName}Label",
+            Size = size
+        };
+    }
+    
+    private ComboBox CreateComboBox(string propertyName, int x, int y, Size size)
+    {
+        return new ComboBox
+        {
+            Items = { "True", "False" },
+            DropDownStyle = ComboBoxStyle.DropDownList,
+            SelectedIndex = 0,
+            Location = new Point(x, y),
+            Name = $"{propertyName}ComboBox",
+            Size = size
+        };
+    }
+    
+    private TextBox CreateTextBox(string propertyName, int x, int y, Size size)
+    {
+        return new TextBox
+        {
+            Location = new Point(x, y),
+            Name = $"{propertyName}TextBox",
+            Size = size
+        };
     }
 
     private void AddProperties(List<PropertyInfo> properties)
@@ -126,26 +180,30 @@ public partial class addFlowerForm : Form
         int textX = 280, textY= 280;
         int startX = 0, startY = 0;
         Size size = new Size(170, 30);
-        Panel panel = new Panel();
-        panel.AutoSize = true;
-        panel.Location = new Point(startX, startY);
-        panel.Name = "propertiesPanel";
+        Panel panel = CreatePropertiesPanel();
+        
         
         foreach (var property in properties)
         {
-            Label label = new Label();
-            label.Text = property.Name;
-            label.Location = new Point(labelX, labelY);
-            label.Name = ($"{property}Label");
-            label.Size = size;
+            Label label = CreateLabel(property.Name, labelX, labelY, size);
             
-            TextBox textBox = new TextBox();
-            textBox.Location = new Point(textX, textY);
-            textBox.Name = ($"{property}TextBox");
-            textBox.Size = size;
+            Control inputControl;
             
+            
+            if (property.PropertyType == typeof(bool))
+            {
+                ComboBox comboBox = CreateComboBox(property.Name, textX, textY, size);
+                panel.Controls.Add(comboBox);
+                inputControl = comboBox;
+            }
+            else
+            {
+                TextBox textBox = CreateTextBox(property.Name, textX, textY, size);
+                panel.Controls.Add(textBox);
+                inputControl = textBox;
+            }
             panel.Controls.Add(label);
-            panel.Controls.Add(textBox);
+            panel.Controls.Add(inputControl);
             
             textY +=  offset;
             labelY += offset;
@@ -161,13 +219,8 @@ public partial class addFlowerForm : Form
     
         if (panel != null)
         {
-            //что за херня
-            panel.Controls.Clear();
-            Console.WriteLine("Panel 'propertiesPanel' cleared.");
-        }
-        else
-        {
-            Console.WriteLine("Panel 'propertiesPanel' not found.");
+            Controls.Remove(panel); 
+            panel.Dispose();
         }
     }
 
@@ -176,12 +229,11 @@ public partial class addFlowerForm : Form
         ClearPanel();
         if (flowersComboBox.SelectedItem == null) return;
         addButton.Visible = true;
-        string stringType = flowersComboBox.SelectedItem.ToString();
-        if (stringType != null)
+        string stringType = flowersComboBox.SelectedItem.ToString() ?? string.Empty;
+        if (stringType != string.Empty)
         {
-            Type flowerType = Assembly.GetExecutingAssembly().GetType("Lab1." + stringType);
-
-
+            Type flowerType = Assembly.GetExecutingAssembly().GetType("Lab1." + stringType) ?? typeof(Flower);
+            
             List<PropertyInfo> propNames = flowerType.GetProperties(
                 BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.FlattenHierarchy
             ).Where(prop => prop.Name != "PictureURL" && prop.Name != "Name").ToList();
@@ -189,8 +241,7 @@ public partial class addFlowerForm : Form
 
         }
 
-        int count = Flower.InstanceCount;
-
 
     }
+
 }

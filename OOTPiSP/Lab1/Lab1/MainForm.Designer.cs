@@ -36,7 +36,6 @@ partial class MainForm
         flowerBox4 = new System.Windows.Forms.PictureBox();
         flowerBox5 = new System.Windows.Forms.PictureBox();
         flowerBox6 = new System.Windows.Forms.PictureBox();
-        addFlowerBtn = new System.Windows.Forms.Button();
         myFlowersBtn = new System.Windows.Forms.Button();
         label1 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
@@ -111,21 +110,11 @@ partial class MainForm
         flowerBox6.TabIndex = 8;
         flowerBox6.TabStop = false;
         // 
-        // addFlowerBtn
-        // 
-        addFlowerBtn.Location = new System.Drawing.Point(132, 653);
-        addFlowerBtn.Name = "addFlowerBtn";
-        addFlowerBtn.Size = new System.Drawing.Size(247, 83);
-        addFlowerBtn.TabIndex = 9;
-        addFlowerBtn.Text = "Add flower";
-        addFlowerBtn.UseVisualStyleBackColor = true;
-        addFlowerBtn.Click += addFlower_click;
-        // 
         // myFlowersBtn
         // 
-        myFlowersBtn.Location = new System.Drawing.Point(723, 653);
+        myFlowersBtn.Location = new System.Drawing.Point(149, 709);
         myFlowersBtn.Name = "myFlowersBtn";
-        myFlowersBtn.Size = new System.Drawing.Size(247, 83);
+        myFlowersBtn.Size = new System.Drawing.Size(882, 83);
         myFlowersBtn.TabIndex = 10;
         myFlowersBtn.Text = "My flowers";
         myFlowersBtn.UseVisualStyleBackColor = true;
@@ -211,7 +200,6 @@ partial class MainForm
         Controls.Add(label2);
         Controls.Add(label1);
         Controls.Add(myFlowersBtn);
-        Controls.Add(addFlowerBtn);
         Controls.Add(flowerBox6);
         Controls.Add(flowerBox5);
         Controls.Add(flowerBox4);
@@ -238,8 +226,6 @@ partial class MainForm
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.Label label6;
-
-    private System.Windows.Forms.Button addFlowerBtn;
 
     private System.Windows.Forms.Button myFlowersBtn;
 

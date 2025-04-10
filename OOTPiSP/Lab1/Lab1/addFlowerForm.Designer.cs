@@ -57,6 +57,7 @@ partial class addFlowerForm
         // 
         // flowersComboBox
         // 
+        flowersComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         flowersComboBox.FormattingEnabled = true;
         flowersComboBox.Location = new System.Drawing.Point(225, 93);
         flowersComboBox.Name = "flowersComboBox";
@@ -75,7 +76,7 @@ partial class addFlowerForm
         // 
         // addButton
         // 
-        addButton.Location = new System.Drawing.Point(655, 39);
+        addButton.Location = new System.Drawing.Point(678, 56);
         addButton.Name = "addButton";
         addButton.Size = new System.Drawing.Size(192, 70);
         addButton.TabIndex = 8;
