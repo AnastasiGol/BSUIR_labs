@@ -14,4 +14,6 @@ class Peone : GardenFlower
     {
         return base.ToString() + $"Petal Layers: {PetalLayers}, Flower Size: {FlowerSize}";
     }
+    
+    public override Flower Clone() => (Flower)MemberwiseClone();
 }

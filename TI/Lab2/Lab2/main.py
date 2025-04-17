@@ -7,6 +7,8 @@ from PyQt6.QtCore import QRegularExpression
 M = 24
 bit_list = [24, 4, 3, 1]
 
+#x^24 + x^4 + x^3 + x + 1
+
 class App(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -31,7 +33,7 @@ class App(QMainWindow):
 
 
     def can_click(self):
-        return  len(self.registerStateEdit.toPlainText()) == M and (self.plainTextEdit.toPlainText() != "") and (self.registerStateEdit.toPlainText() != "")
+        return len(self.registerStateEdit.toPlainText()) == M and (self.plainTextEdit.toPlainText() != "") and (self.registerStateEdit.toPlainText() != "")
 
     def open_binary_file(self, file_name):
         binary_string = ""
@@ -75,7 +77,6 @@ class App(QMainWindow):
         )
         if file_name:
             with open(file_name, "wb") as file:
-
                 file.write(binary_data)
 
     def can_save(self):
@@ -83,7 +84,8 @@ class App(QMainWindow):
 
     def decipher_button_click(self):
         if self.plainTextFromFile == "":
-            plain_text = self.plainTextEdit.toPlainText()
+            filtered_text = ''.join(ch for ch in self.plainTextEdit.toPlainText() if ch in "01")
+            plain_text = filtered_text
         else:
             plain_text = self.plainTextFromFile
         register_state = self.registerStateEdit.toPlainText()
@@ -96,34 +98,31 @@ class App(QMainWindow):
             deciphered_string = f"Все данные: {deciphered_text}"
         self.decipheredText = deciphered_text
         key_str = "".join(map(str, key))
+
         if len(key_str ) > 240:
             key_string = f"Первые 15 байт: {key_str [:120]}\n...\nПоследние 15 байт: {key_str [-120:]}"
         else:
-            key_string = f"Весь ключ: {key_str }"
+            key_string = f"Весь ключ: {key_str[:len(plain_text)] }"
         self.decipheredKeyEdit.setText(key_string)
 
         self.decipheredTextEdit.setText(deciphered_string)
         self.plainTextFromFile = ""
    #     self.saveAction.setEnabled(self.can_save)
 
-
-
-#x^4 + x + 1
-
 #x^23 + x^5 + 1
 #23 - длина, учавствуют 23 и 5
-#x^24 + x^4 + x^3 + x + 1
 
 
 
 def generate_key(plain_text, bit_list, state ):
     state_list = list(map(int, state))
     key = state_list.copy()
+
     ind1, ind2, ind3, ind4 =  bit_list
     ind1, ind2, ind3, ind4 = M - ind1, M - ind2, M - ind3, M- ind4
     key_length = len(plain_text) - len(key)
-    for i in range( key_length):
-        number = state_list [ind1 ] ^ state_list[ind2 ] ^ state_list [ind3] ^ state_list [ind4 ]
+    for i in range(key_length):
+        number = state_list[ind1 ] ^ state_list[ind2 ] ^ state_list [ind3] ^ state_list [ind4 ]
         key.append(number)
         state_list.append(number)
         state_list = state_list[1:]  # сдвигаю на 1 влево

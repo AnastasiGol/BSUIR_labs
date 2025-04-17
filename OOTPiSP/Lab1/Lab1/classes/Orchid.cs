@@ -14,4 +14,6 @@ class Orchid : GardenFlower
     {
         return base.ToString() + $"Type of Growth: {GrowthType}, Humidity: {HumidityPreference}";
     }
+    
+    public override Flower Clone() => (Flower)MemberwiseClone();
 }

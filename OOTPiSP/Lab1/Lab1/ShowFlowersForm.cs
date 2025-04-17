@@ -1,4 +1,5 @@
 ﻿namespace Lab1;
+using System.Reflection;
 
 public partial class ShowFlowersForm : Form
 {
@@ -30,8 +31,13 @@ public partial class ShowFlowersForm : Form
     
     private void SaveState()
     {
-        undoStack.Push(new List<Flower>(Program.flowerList));
-        //redoStack.Clear(); 
+        List<Flower> copy = new List<Flower>(Program.flowerList.Count);
+        foreach (Flower flower in Program.flowerList)
+        {
+            Flower flowerCopy = flower.Clone();
+            copy.Add(flowerCopy);
+        }
+        undoStack.Push(copy);
         
         CheckEnabled(undoButton, undoStack);
         CheckEnabled(redoButton, redoStack);
@@ -102,6 +108,11 @@ public partial class ShowFlowersForm : Form
 
     private void deleteButton_Click(object sender, EventArgs e)
     {
+        if (flowerListView.SelectedItems.Count == 0)
+        {
+            MessageBox.Show("Пожалуйста, выберите элемент для удаления.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
+        }
         SaveState();
         ListViewItem selectedItem = flowerListView.SelectedItems[0];
         int index = selectedItem.Index;
@@ -118,18 +129,32 @@ public partial class ShowFlowersForm : Form
 
     private void editButton_Click(object sender, EventArgs e)
     {
+        if (flowerListView.SelectedItems.Count == 0)
+        {
+            MessageBox.Show("Пожалуйста, выберите элемент.", "Изменение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
+        }
         SaveState();
         ListViewItem selectedItem = flowerListView.SelectedItems[0];
         int index = selectedItem.Index;
-        EditFlowerForm editFlowerForm = new EditFlowerForm(Program.flowerList[index]);
-        editFlowerForm.ShowDialog();
+        if (index >= 0 && index < Program.flowerList.Count)
+        {
+            EditFlowerForm editFlowerForm = new EditFlowerForm(Program.flowerList[index]);
+            editFlowerForm.ShowDialog();
+        }
     }
 
     private void undoButton_click(object sender, EventArgs e)
     {
         if (undoStack.Count > 0)
         {
-            redoStack.Push(Program.flowerList); // Сохраняем текущее состояние
+            List<Flower> copy = new List<Flower>(Program.flowerList.Count);
+            foreach (Flower flower in Program.flowerList)
+            {
+                Flower flowerCopy = flower.Clone();
+                copy.Add(flowerCopy);
+            }
+            redoStack.Push(copy); // Сохраняем текущее состояние
             Program.flowerList = undoStack.Pop(); // Откатываем предыдущее состояние
             UpdateListView();
             CheckEnabled(undoButton, undoStack);
@@ -141,7 +166,16 @@ public partial class ShowFlowersForm : Form
     {
         if (redoStack.Count > 0)
         {
-            undoStack.Push(Program.flowerList); // Сохраняем текущее состояние
+            List<Flower> copy = new List<Flower>(Program.flowerList.Count);
+            foreach (Flower flower in Program.flowerList)
+            {
+                Flower flowerCopy = flower.Clone();
+                copy.Add(flowerCopy);
+            }
+
+            
+            
+            undoStack.Push(copy); // Сохраняем текущее состояние
             Program.flowerList = redoStack.Pop(); // Восстанавливаем состояние
             UpdateListView();
             CheckEnabled(undoButton, undoStack);

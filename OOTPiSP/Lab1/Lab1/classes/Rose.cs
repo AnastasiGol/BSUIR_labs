@@ -15,6 +15,8 @@ class Rose : GardenFlower
     {
         return base.ToString() + $"Thorns: {HasThorns}, Type of Fragrance: {FragranceType}";
     }
+    
+    public override Flower Clone() => (Flower)MemberwiseClone();
 
 
 }

@@ -22,5 +22,9 @@ class Daisy : WildFlower
         return base.ToString() + $", Has Medicinal Properties: {HasMedicinalProperties}, Height Category: {HeightCategory}";
     }
     
+    public override Flower Clone() => (Flower)MemberwiseClone();
+
+
+    
     
 }

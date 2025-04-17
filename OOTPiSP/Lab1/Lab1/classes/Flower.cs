@@ -1,7 +1,7 @@
 ﻿namespace Lab1;
 
 [Serializable]
-public abstract class Flower 
+public abstract class Flower
 {
     public string Name{get; set;}
     public int Height { get; set; }
@@ -15,6 +15,10 @@ public abstract class Flower
     {
         InstanceCount++;
     }
+
+    public abstract Flower Clone();
+
+    
     
     static Flower() 
     {
@@ -25,6 +29,8 @@ public abstract class Flower
     {
         return $"Name: {Name}, Height: {Height} cm, Color: {Color}, Price: {Price} USD, ";
     }
+
+
 
 
 

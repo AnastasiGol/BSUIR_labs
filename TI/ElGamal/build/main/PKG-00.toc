@@ -1,0 +1,761 @@
+('D:\\Uni\\temp\\ElGamal\\build\\main\\main.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz', 'D:\\Uni\\temp\\ElGamal\\build\\main\\PYZ-00.pyz', 'PYZ'),
+  ('struct',
+   'D:\\Uni\\temp\\ElGamal\\build\\main\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'D:\\Uni\\temp\\ElGamal\\build\\main\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'D:\\Uni\\temp\\ElGamal\\build\\main\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'D:\\Uni\\temp\\ElGamal\\build\\main\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'D:\\Uni\\temp\\ElGamal\\build\\main\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_pyqt6',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyqt6.py',
+   'PYSOURCE'),
+  ('main', 'D:\\Uni\\temp\\ElGamal\\Lab3\\main.py', 'PYSOURCE'),
+  ('python312.dll', 'D:\\my downloads\\питон\\python312.dll', 'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\opengl32sw.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\opengl32sw.dll',
+   'BINARY'),
+  ('_lzma.pyd', 'D:\\my downloads\\питон\\DLLs\\_lzma.pyd', 'EXTENSION'),
+  ('_bz2.pyd', 'D:\\my downloads\\питон\\DLLs\\_bz2.pyd', 'EXTENSION'),
+  ('unicodedata.pyd',
+   'D:\\my downloads\\питон\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('select.pyd', 'D:\\my downloads\\питон\\DLLs\\select.pyd', 'EXTENSION'),
+  ('_socket.pyd', 'D:\\my downloads\\питон\\DLLs\\_socket.pyd', 'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'D:\\my downloads\\питон\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd', 'D:\\my downloads\\питон\\DLLs\\pyexpat.pyd', 'EXTENSION'),
+  ('_ssl.pyd', 'D:\\my downloads\\питон\\DLLs\\_ssl.pyd', 'EXTENSION'),
+  ('_hashlib.pyd', 'D:\\my downloads\\питон\\DLLs\\_hashlib.pyd', 'EXTENSION'),
+  ('_decimal.pyd', 'D:\\my downloads\\питон\\DLLs\\_decimal.pyd', 'EXTENSION'),
+  ('_ctypes.pyd', 'D:\\my downloads\\питон\\DLLs\\_ctypes.pyd', 'EXTENSION'),
+  ('_queue.pyd', 'D:\\my downloads\\питон\\DLLs\\_queue.pyd', 'EXTENSION'),
+  ('PyQt6\\QtWidgets.pyd',
+   'D:\\my downloads\\питон\\Lib\\site-packages\\PyQt6\\QtWidgets.pyd',
+   'EXTENSION'),
+  ('PyQt6\\QtGui.pyd',
+   'D:\\my downloads\\питон\\Lib\\site-packages\\PyQt6\\QtGui.pyd',
+   'EXTENSION'),
+  ('PyQt6\\QtCore.pyd',
+   'D:\\my downloads\\питон\\Lib\\site-packages\\PyQt6\\QtCore.pyd',
+   'EXTENSION'),
+  ('PyQt6\\sip.cp312-win_amd64.pyd',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\sip.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd',
+   'D:\\my downloads\\питон\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll', 'D:\\my downloads\\питон\\VCRUNTIME140.dll', 'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Gui.dll',
+   'D:\\my downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Gui.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Core.dll',
+   'D:\\my downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Core.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\MSVCP140.dll',
+   'D:\\my downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Svg.dll',
+   'D:\\my downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Svg.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'D:\\my downloads\\питон\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Network.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Network.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Pdf.dll',
+   'D:\\my downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Pdf.dll',
+   'BINARY'),
+  ('libcrypto-3.dll',
+   'D:\\my downloads\\питон\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('libssl-3.dll', 'D:\\my downloads\\питон\\DLLs\\libssl-3.dll', 'BINARY'),
+  ('libffi-8.dll', 'D:\\my downloads\\питон\\DLLs\\libffi-8.dll', 'BINARY'),
+  ('python3.dll', 'D:\\my downloads\\питон\\python3.dll', 'BINARY'),
+  ('PyQt6\\Qt6\\bin\\MSVCP140_2.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_2.dll',
+   'BINARY'),
+  ('ucrtbase.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\ucrtbase.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\MSVCP140_1.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_1.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\VCRUNTIME140_1.dll',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\translations\\qt_lt.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lt.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ja.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_it.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_it.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_cs.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ko.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ru.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fi.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fi.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ko.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_it.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ja.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ka.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ka.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_en.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_nl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_bg.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_tr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ca.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_he.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_nl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_es.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ca.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_nn.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_da.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_en.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_pl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_hr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_es.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ar.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ar.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_nn.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_nn.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ru.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ka.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ka.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_fr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ca.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_es.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lv.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_de.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_tr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_cs.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_hr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_da.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_gl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_gl.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_gl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_de.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ru.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_cs.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_fa.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fa.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_bg.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_de.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_bg.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_fr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_en.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_uk.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ar.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ar.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ka.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ka.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_he.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_he.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_uk.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_it.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_it.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_fi.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ko.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ja.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ar.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_gd.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gd.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fa.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fa.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_da.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_hu.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hu.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sv.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fr.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_sk.qm',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sk.qm',
+   'DATA'),
+  ('PyQt6\\uic\\widget-plugins\\qscintilla.py',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\uic\\widget-plugins\\qscintilla.py',
+   'DATA'),
+  ('PyQt6\\uic\\widget-plugins\\qtprintsupport.py',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\uic\\widget-plugins\\qtprintsupport.py',
+   'DATA'),
+  ('PyQt6\\uic\\widget-plugins\\qaxcontainer.py',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\uic\\widget-plugins\\qaxcontainer.py',
+   'DATA'),
+  ('PyQt6\\uic\\widget-plugins\\qtopenglwidgets.py',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\uic\\widget-plugins\\qtopenglwidgets.py',
+   'DATA'),
+  ('PyQt6\\uic\\widget-plugins\\qtcharts.py',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\uic\\widget-plugins\\qtcharts.py',
+   'DATA'),
+  ('PyQt6\\uic\\widget-plugins\\qtwebenginewidgets.py',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\uic\\widget-plugins\\qtwebenginewidgets.py',
+   'DATA'),
+  ('PyQt6\\uic\\widget-plugins\\qtquickwidgets.py',
+   'D:\\my '
+   'downloads\\питон\\Lib\\site-packages\\PyQt6\\uic\\widget-plugins\\qtquickwidgets.py',
+   'DATA'),
+  ('base_library.zip',
+   'D:\\Uni\\temp\\ElGamal\\build\\main\\base_library.zip',
+   'DATA')],
+ 'python312.dll',
+ False,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)

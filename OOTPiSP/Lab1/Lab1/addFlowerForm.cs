@@ -24,7 +24,7 @@ public partial class addFlowerForm : Form
     {
         var flowerTypes = typeof(Flower).Assembly.GetTypes()  
             .Where(t => t.IsSubclassOf(typeof(Flower)) && !t.IsAbstract) //  наследники Flower
-            .Select(t => t.Name) // имена классов
+            .Select(t => t.Name)
             .ToArray();
         flowersComboBox.Items.AddRange(flowerTypes);
     }
@@ -84,7 +84,7 @@ public partial class addFlowerForm : Form
                 (value is string str && string.IsNullOrWhiteSpace(str)) || 
                 (value is int num && num == 0))
             {
-                return true; //  пустое поле
+                return true; 
             }
         }
         return false; 

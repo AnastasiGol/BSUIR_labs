@@ -16,6 +16,8 @@ class Tulip : GardenFlower
     {
         return base.ToString() + $"Bulbous: {IsBulbous}, Bloom Period: {BloomPeriod}";
     }
+    
+    public override Flower Clone() => (Flower)MemberwiseClone();
 
 
 }
