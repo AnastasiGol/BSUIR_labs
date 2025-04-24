@@ -41,6 +41,8 @@ partial class ShowFlowersForm
         undoButton = new System.Windows.Forms.Button();
         redoButton = new System.Windows.Forms.Button();
         infoButton = new System.Windows.Forms.Button();
+        serializationButton = new System.Windows.Forms.Button();
+        deserializationButton = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // label1
@@ -65,7 +67,7 @@ partial class ShowFlowersForm
         // deleteButton
         // 
         deleteButton.Enabled = false;
-        deleteButton.Location = new System.Drawing.Point(12, 772);
+        deleteButton.Location = new System.Drawing.Point(12, 769);
         deleteButton.Name = "deleteButton";
         deleteButton.Size = new System.Drawing.Size(343, 74);
         deleteButton.TabIndex = 3;
@@ -94,7 +96,7 @@ partial class ShowFlowersForm
         // editButton
         // 
         editButton.Enabled = false;
-        editButton.Location = new System.Drawing.Point(744, 772);
+        editButton.Location = new System.Drawing.Point(710, 769);
         editButton.Name = "editButton";
         editButton.Size = new System.Drawing.Size(332, 74);
         editButton.TabIndex = 5;
@@ -105,7 +107,7 @@ partial class ShowFlowersForm
         // undoButton
         // 
         undoButton.Enabled = false;
-        undoButton.Location = new System.Drawing.Point(460, 852);
+        undoButton.Location = new System.Drawing.Point(460, 924);
         undoButton.Name = "undoButton";
         undoButton.Size = new System.Drawing.Size(90, 74);
         undoButton.TabIndex = 6;
@@ -116,7 +118,7 @@ partial class ShowFlowersForm
         // redoButton
         // 
         redoButton.Enabled = false;
-        redoButton.Location = new System.Drawing.Point(556, 852);
+        redoButton.Location = new System.Drawing.Point(556, 924);
         redoButton.Name = "redoButton";
         redoButton.Size = new System.Drawing.Size(90, 74);
         redoButton.TabIndex = 7;
@@ -127,7 +129,7 @@ partial class ShowFlowersForm
         // infoButton
         // 
         infoButton.Enabled = false;
-        infoButton.Location = new System.Drawing.Point(376, 772);
+        infoButton.Location = new System.Drawing.Point(361, 769);
         infoButton.Name = "infoButton";
         infoButton.Size = new System.Drawing.Size(343, 74);
         infoButton.TabIndex = 8;
@@ -135,11 +137,33 @@ partial class ShowFlowersForm
         infoButton.UseVisualStyleBackColor = true;
         infoButton.Click += infoButton_Click;
         // 
+        // serializationButton
+        // 
+        serializationButton.Location = new System.Drawing.Point(290, 848);
+        serializationButton.Name = "serializationButton";
+        serializationButton.Size = new System.Drawing.Size(260, 70);
+        serializationButton.TabIndex = 9;
+        serializationButton.Text = "Сериализовать";
+        serializationButton.UseVisualStyleBackColor = true;
+        serializationButton.Click += serializationButton_Click;
+        // 
+        // deserializationButton
+        // 
+        deserializationButton.Location = new System.Drawing.Point(556, 849);
+        deserializationButton.Name = "deserializationButton";
+        deserializationButton.Size = new System.Drawing.Size(245, 70);
+        deserializationButton.TabIndex = 10;
+        deserializationButton.Text = "Десериализовать";
+        deserializationButton.UseVisualStyleBackColor = true;
+        deserializationButton.Click += deserializationButton_Click;
+        // 
         // ShowFlowersForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(1074, 935);
+        ClientSize = new System.Drawing.Size(1078, 1003);
+        Controls.Add(deserializationButton);
+        Controls.Add(serializationButton);
         Controls.Add(infoButton);
         Controls.Add(redoButton);
         Controls.Add(undoButton);
@@ -152,6 +176,9 @@ partial class ShowFlowersForm
         Load += ShowFlowersForm_Load;
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Button serializationButton;
+    private System.Windows.Forms.Button deserializationButton;
 
     private System.Windows.Forms.Button infoButton;
 

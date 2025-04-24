@@ -1,6 +1,8 @@
 ﻿namespace Lab1;
-
-abstract class GardenFlower : Flower
+using System.Xml.Serialization;
+[XmlInclude(typeof(Tulip))]
+[XmlInclude(typeof(Rose))]
+public abstract class GardenFlower : Flower
 {
     public string Season{get;set;}
     public string Pruning{get;set;}

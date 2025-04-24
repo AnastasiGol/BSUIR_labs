@@ -1,6 +1,6 @@
 ﻿namespace Lab1;
 
-class Cornflower : WildFlower
+public class Cornflower : WildFlower
 {
     public bool IsEdible { get; set; }
     public bool WildGrowthRegion { get; set; }

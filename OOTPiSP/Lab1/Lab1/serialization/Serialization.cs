@@ -4,6 +4,12 @@
     using System.Xml.Serialization;
     using System.IO;
     using System;
+    
+    public interface ISerializer
+    {
+        void Serialize(List<Flower> flowers, string filePath);
+        List<Flower> Deserialize(string filePath);
+    }
 
     /*internal class Serialization
     {

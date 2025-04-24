@@ -172,8 +172,6 @@ public partial class ShowFlowersForm : Form
                 Flower flowerCopy = flower.Clone();
                 copy.Add(flowerCopy);
             }
-
-            
             
             undoStack.Push(copy); // Сохраняем текущее состояние
             Program.flowerList = redoStack.Pop(); // Восстанавливаем состояние
@@ -190,4 +188,77 @@ public partial class ShowFlowersForm : Form
         ShowPropertiesForm showPropertiesForm = new ShowPropertiesForm(Program.flowerList[index]);
         showPropertiesForm.ShowDialog();
     }
+
+    private void serializationButton_Click(object sender, EventArgs e)
+    {
+        ChooseTypeForm chooseTypeForm = new ChooseTypeForm();
+        if (chooseTypeForm.ShowDialog() == DialogResult.OK)
+        {
+            string selectedFormat = chooseTypeForm.SelectedFormat;
+            string fileName = chooseTypeForm.FileName;
+            if (selectedFormat == "JSON")
+            {
+                fileName += ".json";
+                FlowerJsonSerializer serializer = new FlowerJsonSerializer();
+                serializer.Serialize(Program.flowerList, fileName);
+                MessageBox.Show("Список цветов успешно сериализован!");
+            }
+            else if (selectedFormat == "XML")
+            {
+                fileName += ".xml";
+                FlowerXmlSerializer serializer = new FlowerXmlSerializer();
+                serializer.Serialize(Program.flowerList, fileName);
+                MessageBox.Show("Список цветов успешно сериализован!");
+            }
+        }
+        
+    }
+    
+    private bool CheckFileExists(string filePath)
+    {
+        if (!File.Exists(filePath))
+        {
+            MessageBox.Show($"Файл \"{filePath}\" не найден.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return false;
+        }
+        return true;
+    }
+
+
+    private void deserializationButton_Click(object sender, EventArgs e)
+    {
+        ChooseTypeForm chooseTypeForm = new ChooseTypeForm();
+        if (chooseTypeForm.ShowDialog() == DialogResult.OK)
+        {
+            string selectedFormat = chooseTypeForm.SelectedFormat;
+            string fileName = chooseTypeForm.FileName;
+
+            try
+            {
+                if (selectedFormat == "JSON")
+                {
+                    fileName += ".json";
+                    if (!CheckFileExists(fileName)) return;
+
+                    FlowerJsonSerializer deserializer = new FlowerJsonSerializer();
+                    Program.flowerList = deserializer.Deserialize(fileName);
+                }
+                else if (selectedFormat == "XML")
+                {
+                    fileName += ".xml";
+                    if (!CheckFileExists(fileName)) return;
+                    FlowerXmlSerializer deserializer = new FlowerXmlSerializer();
+                    Program.flowerList = deserializer.Deserialize(fileName);
+                }
+
+                UpdateListView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при десериализации: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+
+    
 }

@@ -1,6 +1,6 @@
 ﻿namespace Lab1;
 
-class Rose : GardenFlower
+public class Rose : GardenFlower
 {
     public bool HasThorns{ get; set; }
     public string FragranceType{ get; set; }

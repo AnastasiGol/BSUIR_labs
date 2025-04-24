@@ -1,6 +1,15 @@
 ﻿namespace Lab1;
+using System.Xml.Serialization;
 
 [Serializable]
+
+
+[XmlInclude(typeof(Rose))]
+[XmlInclude(typeof(Tulip))]
+[XmlInclude(typeof(Peone))]
+[XmlInclude(typeof(Orchid))]
+[XmlInclude(typeof(Daisy))]
+[XmlInclude(typeof(Cornflower))]
 public abstract class Flower
 {
     public string Name{get; set;}

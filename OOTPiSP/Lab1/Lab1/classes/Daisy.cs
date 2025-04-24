@@ -1,6 +1,6 @@
 ﻿namespace Lab1;
 
-class Daisy : WildFlower
+public class Daisy : WildFlower
 {
     public bool HasMedicinalProperties { get; set; }
     public string HeightCategory { get; set; }

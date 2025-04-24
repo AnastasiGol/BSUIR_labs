@@ -1,6 +1,6 @@
 ﻿namespace Lab1;
 
-class Peone : GardenFlower
+public class Peone : GardenFlower
 {
     public int PetalLayers { get; set; }
     public string FlowerSize {get; set;}

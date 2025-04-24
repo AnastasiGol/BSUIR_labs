@@ -1,6 +1,6 @@
 ﻿namespace Lab1;
 
-class Orchid : GardenFlower
+public class Orchid : GardenFlower
 {
     public string GrowthType{ get; set; }
     public string HumidityPreference{ get; set; }
