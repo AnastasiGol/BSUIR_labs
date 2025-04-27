@@ -1,7 +1,8 @@
 namespace Lab1;
-
+using System.Reflection;
 public partial class MainForm : Form
 {
+    //public static Assembly PluginAssembly = Assembly.GetExecutingAssembly();
     public MainForm()
     {
         InitializeComponent();
@@ -12,7 +13,8 @@ public partial class MainForm : Form
             flowerBox3,
             flowerBox4,
             flowerBox5,
-            flowerBox6
+            flowerBox6,
+            //flowerBox7
         };
         
         List<Label> labels = new List<Label> { label1, label2, label3, label4, label5, label6 };
@@ -23,7 +25,8 @@ public partial class MainForm : Form
             new Orchid(),
             new Peone(),
             new Rose(),
-            new Tulip()
+            new Tulip(),
+            //new Sunflower()
         
         };
         for (int i = 0; i < flowerList.Count; i++)
@@ -45,5 +48,7 @@ public partial class MainForm : Form
         ShowFlowersForm showFlowersForm = new ShowFlowersForm();
         showFlowersForm.ShowDialog();
     }
+
     
+
 }

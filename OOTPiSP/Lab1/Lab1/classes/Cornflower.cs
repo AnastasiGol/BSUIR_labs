@@ -15,10 +15,7 @@ public class Cornflower : WildFlower
         return base.ToString() + $"Edible : {IsEdible}, WildGrowth : {WildGrowthRegion}";
     }
 
-    /*public override Flower Clone()
-    {
-        return (Flower)MemberwiseClone();
-    }*/
+
 
     public override Flower Clone() => (Flower)MemberwiseClone();
 }

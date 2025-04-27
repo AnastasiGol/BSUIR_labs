@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ExoticFlowerPlugin\ExoticFlowerPlugin.csproj" />
       <ProjectReference Include="..\Lab1\Lab1.csproj" />
     </ItemGroup>
 

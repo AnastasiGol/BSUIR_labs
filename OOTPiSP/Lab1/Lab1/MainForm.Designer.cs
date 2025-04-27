@@ -43,8 +43,8 @@ partial class MainForm
         label4 = new System.Windows.Forms.Label();
         label5 = new System.Windows.Forms.Label();
         label6 = new System.Windows.Forms.Label();
-        label7 = new System.Windows.Forms.Label();
         label8 = new System.Windows.Forms.Label();
+        label9 = new System.Windows.Forms.Label();
         ((System.ComponentModel.ISupportInitialize)flowerBox1).BeginInit();
         ((System.ComponentModel.ISupportInitialize)flowerBox2).BeginInit();
         ((System.ComponentModel.ISupportInitialize)flowerBox3).BeginInit();
@@ -112,7 +112,7 @@ partial class MainForm
         // 
         // myFlowersBtn
         // 
-        myFlowersBtn.Location = new System.Drawing.Point(149, 709);
+        myFlowersBtn.Location = new System.Drawing.Point(136, 641);
         myFlowersBtn.Name = "myFlowersBtn";
         myFlowersBtn.Size = new System.Drawing.Size(882, 83);
         myFlowersBtn.TabIndex = 10;
@@ -168,15 +168,6 @@ partial class MainForm
         label6.TabIndex = 16;
         label6.Text = "label6";
         // 
-        // label7
-        // 
-        label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-        label7.Location = new System.Drawing.Point(200, 160);
-        label7.Name = "label7";
-        label7.Size = new System.Drawing.Size(157, 39);
-        label7.TabIndex = 17;
-        label7.Text = "Wildflowers";
-        // 
         // label8
         // 
         label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -186,13 +177,22 @@ partial class MainForm
         label8.TabIndex = 18;
         label8.Text = "Gardenflowers";
         // 
+        // label9
+        // 
+        label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+        label9.Location = new System.Drawing.Point(190, 160);
+        label9.Name = "label9";
+        label9.Size = new System.Drawing.Size(180, 28);
+        label9.TabIndex = 21;
+        label9.Text = "Wildflowers";
+        // 
         // MainForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(1178, 844);
+        Controls.Add(label9);
         Controls.Add(label8);
-        Controls.Add(label7);
         Controls.Add(label6);
         Controls.Add(label5);
         Controls.Add(label4);
@@ -219,7 +219,8 @@ partial class MainForm
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.Label label7;
+    private System.Windows.Forms.Label label9;
+
     private System.Windows.Forms.Label label8;
 
     private System.Windows.Forms.Label label3;

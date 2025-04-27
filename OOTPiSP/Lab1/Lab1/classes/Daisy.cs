@@ -10,12 +10,7 @@ public class Daisy : WildFlower
         Name = "Daisy";
         
     }
-
-    public Daisy(bool hasMedicinalProperties, string heightCategory)
-    {
-        HasMedicinalProperties = hasMedicinalProperties;
-        HeightCategory = heightCategory;
-    }
+    
 
     public override string ToString()
     {

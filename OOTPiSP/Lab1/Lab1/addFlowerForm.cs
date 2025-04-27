@@ -8,6 +8,11 @@ namespace Lab1;
 
 public partial class addFlowerForm : Form
 {
+    public static string[] FlowerTypeNames = typeof(Flower).Assembly.GetTypes()  
+        .Where(t => t.IsSubclassOf(typeof(Flower)) && !t.IsAbstract) //  наследники Flower
+        .Select(t => t.Name)
+        .ToArray();
+    public Type[] FlowerTypes { get; set; } = Array.Empty<Type>();
     
     
     private Type flowerType;
@@ -22,11 +27,7 @@ public partial class addFlowerForm : Form
     
     private void LoadFlowerTypes()
     {
-        var flowerTypes = typeof(Flower).Assembly.GetTypes()  
-            .Where(t => t.IsSubclassOf(typeof(Flower)) && !t.IsAbstract) //  наследники Flower
-            .Select(t => t.Name)
-            .ToArray();
-        flowersComboBox.Items.AddRange(flowerTypes);
+        flowersComboBox.Items.AddRange(FlowerTypeNames);
     }
 
     private Dictionary<string, object> GetProperties(Type type)
@@ -89,13 +90,24 @@ public partial class addFlowerForm : Form
         }
         return false; 
     }
+    
+    private bool IsTypeAlreadyLoaded(Type type)
+    {
+        // все типы из текущей сборки
+        var loadedTypes = AppDomain.CurrentDomain.GetAssemblies()
+            .SelectMany(a => a.GetTypes())
+            .ToList();
 
+        // существует ли уже тип с таким именем
+        return loadedTypes.Any(t => t == type);
+    }
     
     private void addButton_Click(object sender, EventArgs e)
     {
         string stringType = flowersComboBox.SelectedItem.ToString() ?? string.Empty;
 
-        Type flowerType = Type.GetType("Lab1." + stringType) ?? typeof(object);
+        Type flowerType = Type.GetType("Lab1." + stringType) ?? ShowFlowersForm.PluginAssembly.GetTypes()
+            .FirstOrDefault(t => t.Name == stringType && typeof(Flower).IsAssignableFrom(t)) ?? typeof(object);
         Dictionary<string, object> properties = GetProperties(flowerType);
         object flowerInstance = Activator.CreateInstance(flowerType) ;
 

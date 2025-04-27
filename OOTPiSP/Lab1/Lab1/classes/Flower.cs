@@ -10,6 +10,7 @@ using System.Xml.Serialization;
 [XmlInclude(typeof(Orchid))]
 [XmlInclude(typeof(Daisy))]
 [XmlInclude(typeof(Cornflower))]
+
 public abstract class Flower
 {
     public string Name{get; set;}
@@ -26,8 +27,6 @@ public abstract class Flower
     }
 
     public abstract Flower Clone();
-
-    
     
     static Flower() 
     {

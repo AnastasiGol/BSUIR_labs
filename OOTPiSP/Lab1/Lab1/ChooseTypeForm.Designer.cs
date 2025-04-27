@@ -36,6 +36,8 @@ partial class ChooseTypeForm
         label1 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
         fileTextBox = new System.Windows.Forms.TextBox();
+        label3 = new System.Windows.Forms.Label();
+        encryptComboBox = new System.Windows.Forms.ComboBox();
         SuspendLayout();
         // 
         // formatComboBox
@@ -49,7 +51,7 @@ partial class ChooseTypeForm
         // okButton
         // 
         okButton.Enabled = false;
-        okButton.Location = new System.Drawing.Point(12, 351);
+        okButton.Location = new System.Drawing.Point(12, 457);
         okButton.Name = "okButton";
         okButton.Size = new System.Drawing.Size(247, 73);
         okButton.TabIndex = 1;
@@ -63,7 +65,7 @@ partial class ChooseTypeForm
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(176, 34);
         label1.TabIndex = 2;
-        label1.Text = "Выберете тип:";
+        label1.Text = "Choose type:";
         // 
         // label2
         // 
@@ -71,7 +73,7 @@ partial class ChooseTypeForm
         label2.Name = "label2";
         label2.Size = new System.Drawing.Size(176, 34);
         label2.TabIndex = 3;
-        label2.Text = "Введите имя файла:";
+        label2.Text = "Enter file name:";
         // 
         // fileTextBox
         // 
@@ -81,20 +83,43 @@ partial class ChooseTypeForm
         fileTextBox.TabIndex = 4;
         fileTextBox.TextChanged += fileTextBox_TextChanged;
         // 
+        // label3
+        // 
+        label3.Location = new System.Drawing.Point(12, 276);
+        label3.Name = "label3";
+        label3.Size = new System.Drawing.Size(302, 34);
+        label3.TabIndex = 5;
+        label3.Text = "Encrypt before saving:";
+        // 
+        // encryptComboBox
+        // 
+        encryptComboBox.FormattingEnabled = true;
+        encryptComboBox.Location = new System.Drawing.Point(12, 313);
+        encryptComboBox.Name = "encryptComboBox";
+        encryptComboBox.Size = new System.Drawing.Size(176, 33);
+        encryptComboBox.TabIndex = 6;
+        // 
         // ChooseTypeForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(694, 500);
+        ClientSize = new System.Drawing.Size(718, 571);
+        Controls.Add(encryptComboBox);
+        Controls.Add(label3);
         Controls.Add(fileTextBox);
         Controls.Add(label2);
         Controls.Add(label1);
         Controls.Add(okButton);
         Controls.Add(formatComboBox);
         Text = "ChooseTypeForm";
+        Load += ChoosTypeForm_Load_1;
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.ComboBox encryptComboBox;
+
+    private System.Windows.Forms.Label label3;
 
     private System.Windows.Forms.TextBox fileTextBox;
 

@@ -1,4 +1,6 @@
-﻿namespace Lab1;
+﻿using Lab1.dataProcessing;
+
+namespace Lab1;
 using System.Text.Json;
 using System.IO;
 using System.Text.Json;
@@ -19,7 +21,7 @@ public class FlowerJsonSerializer: ISerializer
         };
     }
 
-    // Добавляем информацию о всех наследниках Flower
+    // информация о всех наследниках Flower
     private static void ResolverModifier(JsonTypeInfo typeInfo)
     {
         if (typeInfo.Type == typeof(Flower))
@@ -42,13 +44,38 @@ public class FlowerJsonSerializer: ISerializer
 
     public void Serialize(List<Flower> flowers, string filePath)
     {
-        string json = JsonSerializer.Serialize(flowers, GetOptions());
-        File.WriteAllText(filePath, json);
+        if (ChooseTypeForm.ShouldEncrypt)
+        {
+            PluginManager manager = new PluginManager();
+            
+            string json = JsonSerializer.Serialize(flowers, GetOptions());
+            byte[] jsonBytes = System.Text.Encoding.UTF8.GetBytes(json);
+
+            byte[] encryptedBytes = manager.Encrypt(jsonBytes);
+            File.WriteAllBytes(filePath, encryptedBytes);
+        }
+        else
+        {
+            string json = JsonSerializer.Serialize(flowers, GetOptions());
+            File.WriteAllText(filePath, json);
+        }
     }
 
     public List<Flower> Deserialize(string filePath)
     {
-        string json = File.ReadAllText(filePath);
-        return System.Text.Json.JsonSerializer.Deserialize<List<Flower>>(json, GetOptions());
+        if (ChooseTypeForm.ShouldEncrypt)
+        {
+            PluginManager manager = new PluginManager();
+            byte[] encryptedBytes = File.ReadAllBytes(filePath);
+            byte[] decryptedBytes = manager.Decrypt(encryptedBytes);
+
+            string json = System.Text.Encoding.UTF8.GetString(decryptedBytes);
+            return JsonSerializer.Deserialize<List<Flower>>(json, GetOptions());
+        }
+        else
+        {
+            string json = File.ReadAllText(filePath);
+            return JsonSerializer.Deserialize<List<Flower>>(json, GetOptions());
+        }
     }
 }

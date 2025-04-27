@@ -6,6 +6,7 @@ public partial class ShowFlowersForm : Form
     
     private Stack<List<Flower>> undoStack = new Stack<List<Flower>>();
     private Stack<List<Flower>> redoStack = new Stack<List<Flower>>();
+    public static Assembly PluginAssembly = Assembly.GetExecutingAssembly();
     private void LoadImages()
     {
         int imgKey = 0;
@@ -120,10 +121,6 @@ public partial class ShowFlowersForm : Form
         {
             Program.flowerList.RemoveAt(index);
         }
-        //flowerListView.Items.Remove(selectedItem);
-
-
-
         UpdateListView();
     }
 
@@ -260,5 +257,24 @@ public partial class ShowFlowersForm : Form
         }
     }
 
-    
+
+    private void addClass_Click(object sender, EventArgs e)
+    {
+        OpenFileDialog openFileDialogDll = new OpenFileDialog();
+        openFileDialogDll.Filter = "DLL files (*.dll)|*.dll";
+        openFileDialogDll.Title = "Выберите DLL плагина";
+
+        if (openFileDialogDll.ShowDialog() == DialogResult.OK)
+        {
+            PluginAssembly = Assembly.LoadFrom(openFileDialogDll.FileName);
+            var pluginTypes = PluginAssembly.GetTypes()
+                .Where(t => typeof(Flower).IsAssignableFrom(t) && !t.IsAbstract).ToArray();
+            addFlowerForm.FlowerTypeNames = addFlowerForm.FlowerTypeNames
+                .Concat(pluginTypes
+                    .Where(t => !addFlowerForm.FlowerTypeNames.Contains(t.Name))  // Проверка на существование
+                    .Select(t => t.Name))
+                .ToArray();
+
+        }
+    }
 }

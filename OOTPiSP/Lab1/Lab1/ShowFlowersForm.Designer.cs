@@ -43,6 +43,7 @@ partial class ShowFlowersForm
         infoButton = new System.Windows.Forms.Button();
         serializationButton = new System.Windows.Forms.Button();
         deserializationButton = new System.Windows.Forms.Button();
+        addClass = new System.Windows.Forms.Button();
         SuspendLayout();
         // 
         // label1
@@ -107,7 +108,7 @@ partial class ShowFlowersForm
         // undoButton
         // 
         undoButton.Enabled = false;
-        undoButton.Location = new System.Drawing.Point(460, 924);
+        undoButton.Location = new System.Drawing.Point(442, 849);
         undoButton.Name = "undoButton";
         undoButton.Size = new System.Drawing.Size(90, 74);
         undoButton.TabIndex = 6;
@@ -118,7 +119,7 @@ partial class ShowFlowersForm
         // redoButton
         // 
         redoButton.Enabled = false;
-        redoButton.Location = new System.Drawing.Point(556, 924);
+        redoButton.Location = new System.Drawing.Point(538, 849);
         redoButton.Name = "redoButton";
         redoButton.Size = new System.Drawing.Size(90, 74);
         redoButton.TabIndex = 7;
@@ -133,35 +134,46 @@ partial class ShowFlowersForm
         infoButton.Name = "infoButton";
         infoButton.Size = new System.Drawing.Size(343, 74);
         infoButton.TabIndex = 8;
-        infoButton.Text = "Подробнее";
+        infoButton.Text = "Show more\r\n";
         infoButton.UseVisualStyleBackColor = true;
         infoButton.Click += infoButton_Click;
         // 
         // serializationButton
         // 
-        serializationButton.Location = new System.Drawing.Point(290, 848);
+        serializationButton.Location = new System.Drawing.Point(95, 849);
         serializationButton.Name = "serializationButton";
         serializationButton.Size = new System.Drawing.Size(260, 70);
         serializationButton.TabIndex = 9;
-        serializationButton.Text = "Сериализовать";
+        serializationButton.Text = "Save";
         serializationButton.UseVisualStyleBackColor = true;
         serializationButton.Click += serializationButton_Click;
         // 
         // deserializationButton
         // 
-        deserializationButton.Location = new System.Drawing.Point(556, 849);
+        deserializationButton.Location = new System.Drawing.Point(724, 849);
         deserializationButton.Name = "deserializationButton";
         deserializationButton.Size = new System.Drawing.Size(245, 70);
         deserializationButton.TabIndex = 10;
-        deserializationButton.Text = "Десериализовать";
+        deserializationButton.Text = "Upload";
         deserializationButton.UseVisualStyleBackColor = true;
         deserializationButton.Click += deserializationButton_Click;
+        // 
+        // addClass
+        // 
+        addClass.Location = new System.Drawing.Point(442, 929);
+        addClass.Name = "addClass";
+        addClass.Size = new System.Drawing.Size(186, 64);
+        addClass.TabIndex = 11;
+        addClass.Text = "Add class";
+        addClass.UseVisualStyleBackColor = true;
+        addClass.Click += addClass_Click;
         // 
         // ShowFlowersForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(1078, 1003);
+        ClientSize = new System.Drawing.Size(1087, 1035);
+        Controls.Add(addClass);
         Controls.Add(deserializationButton);
         Controls.Add(serializationButton);
         Controls.Add(infoButton);
@@ -176,6 +188,8 @@ partial class ShowFlowersForm
         Load += ShowFlowersForm_Load;
         ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Button addClass;
 
     private System.Windows.Forms.Button serializationButton;
     private System.Windows.Forms.Button deserializationButton;
