@@ -75,7 +75,6 @@
     <property name="font">
      <font>
       <pointsize>15</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -218,7 +217,7 @@
      <x>0</x>
      <y>0</y>
      <width>743</width>
-     <height>22</height>
+     <height>18</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -226,19 +225,31 @@
      <string>Файл</string>
     </property>
     <addaction name="openAction"/>
+    <addaction name="openCipherAction"/>
     <addaction name="saveAction"/>
+    <addaction name="saveCipherAction"/>
    </widget>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="openAction">
    <property name="text">
-    <string>Открыть</string>
+    <string>Открыть текст</string>
    </property>
   </action>
   <action name="saveAction">
    <property name="text">
-    <string>Сохранить</string>
+    <string>Сохранить текст</string>
+   </property>
+  </action>
+  <action name="saveCipherAction">
+   <property name="text">
+    <string>Сохранить шифр</string>
+   </property>
+  </action>
+  <action name="openCipherAction">
+   <property name="text">
+    <string>Открыть шифр</string>
    </property>
   </action>
  </widget>

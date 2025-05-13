@@ -130,6 +130,8 @@ class App(QMainWindow):
         self.XEdit.textChanged.connect(self.check_encipher_edits)
         self.openAction.triggered.connect(self.open_file)
         self.saveAction.triggered.connect(self.save_file)
+        self.saveCipherAction.triggered.connect(self.save_cipher)
+        self.openCipherAction.triggered.connect(self.open_cipher)
 
         self.findGButton.clicked.connect(self.load_primitive_roots)
         self.encypherButton.clicked.connect(self.encipher_button_click)
@@ -154,12 +156,16 @@ class App(QMainWindow):
 
 
     def load_primitive_roots(self):
-        p = self.PEdit.toPlainText()
-        x = self.XEdit.toPlainText()
-        k = self.KEdit.toPlainText()
+        p = re.sub(r'\D', '', self.PEdit.toPlainText())  # Удаляем всё, что не цифра
+        x = re.sub(r'\D', '', self.XEdit.toPlainText())
+        k = re.sub(r'\D', '', self.KEdit.toPlainText())
+
+        self.PEdit.setPlainText(p)
+        self.XEdit.setPlainText(x)
+        self.KEdit.setPlainText(k)
 
         # Проверяем значения p, x и k
-        valid, error_message = self.check_numb(p, 2, 10000)  # Пример диапазона от 2 до 10000 для p
+        valid, error_message = self.check_numb(p, 2, 1000000)  # от 2 до 10000 для p
         if not valid:
             self.show_error(error_message)
             return
@@ -225,8 +231,7 @@ class App(QMainWindow):
         k = self.k
         if not self.check_combobox_selection():  # Проверяем перед выполнением действия
             return
-        self.plainTextEdit.setText(self.resultEdit.toPlainText())
-        self.resultEdit.setText("")
+
 
         ciphertext = self.plainTextEdit.toPlainText()
 
@@ -265,6 +270,19 @@ class App(QMainWindow):
         except Exception as e:
             self.show_error(f"Ошибка при чтении файла: {e}")
 
+    def open_cipher(self):
+        file_name, _ = QFileDialog.getOpenFileName(
+            self, "Выберите файл", "", "Все файлы (*.*)"
+        )
+        try:
+            with open(file_name, "r") as file:
+                cipher = file.read()
+                self.plainTextEdit.setPlainText(cipher)
+        except Exception as e:
+            self.show_error(f"Ошибка при чтении файла: {e}")
+
+
+
 
     def save_file(self):
         file_name, _ = QFileDialog.getOpenFileName(
@@ -285,7 +303,6 @@ class App(QMainWindow):
             for num in numbers:
                 characters.append(chr(num))
 
-            message = ''.join(characters)
             try:
                 byte_data = bytes(numbers)
             except ValueError as e:
@@ -295,12 +312,22 @@ class App(QMainWindow):
             with open(file_name, "wb") as file:
                 file.write(byte_data)
 
+    def save_cipher(self):
+        file_name, _ = QFileDialog.getSaveFileName(self, "Сохранить файл")
+        if file_name:
+            # Получаем строку чисел из QTextEdit
+            result = self.resultEdit.toPlainText()
 
+            if not result:
+                self.show_error("Ошибка: поле результата пустое.")
+                return
 
-
-
-
-
+            try:
+                with open(file_name, "w", encoding="utf-8") as file:
+                    # Сохраняем как строку чисел, разделённых запятой
+                    file.write(result)
+            except Exception as e:
+                self.show_error(f"Ошибка при сохранении файла:\n{e}")
 
 
 if __name__ == "__main__":
